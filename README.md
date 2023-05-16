@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/Web-dev-rafik/frontendmentor-interactive-rating-component-solution/blob/main/Screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/Web-dev-rafik/frontendmentor-interactive-rating-component-solution)
+- Live Site URL: [Live site URL](https://web-dev-rafik.github.io/frontendmentor-interactive-rating-component-solution/)
 
 ## Built with
 
