@@ -1,0 +1,233 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+  2. Remove default padding and margin.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+/* 
+  1. Add accessible line-height
+  2. Add font-family
+   */
+body {
+  line-height: 1.5;
+  font-family: "Overpass", sans-serif;
+}
+
+/* Improve image defaults */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* CSS variables */
+:root {
+  /* Primary */
+
+  --Orange: hsl(25, 97%, 53%);
+
+  /* Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Light-Dark-Blue: hsl(213, 19%, 21%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+/* Component styles */
+
+p {
+  /* Font size (paragraph): 15px */
+  font-size: 0.9375rem;
+}
+
+body {
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  background-color: var(--Dark-Blue);
+  max-width: 330px;
+  border-radius: 15px;
+}
+
+.rating {
+  padding: 1.5rem 1rem;
+}
+
+.rating-star-icon {
+  background-color: var(--Light-Dark-Blue);
+  border-radius: 50%;
+  width: fit-content;
+  padding: 0.8em;
+}
+
+.rating-title {
+  color: var(--White);
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.rating-txt {
+  color: var(--Medium-Grey);
+  margin-top: 0.5rem;
+}
+
+.rating-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.25rem;
+}
+
+.rating-list li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.rating-list li input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.rating-list li label {
+  background-color: var(--Light-Dark-Blue);
+  color: var(--Medium-Grey);
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* ratings active state */
+.rating-list li label:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+.rating-list li input:checked + label {
+  background-color: var(--Medium-Grey);
+  color: var(--White);
+}
+
+.rating-btn {
+  border: none;
+  background-color: var(--Orange);
+  color: var(--White);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  padding: 1em 0;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+/* button active state */
+.rating-btn:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+  cursor: pointer;
+}
+
+.thank {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.thank-score {
+  background-color: var(--Light-Dark-Blue);
+  color: var(--Orange);
+  padding: 0.5em;
+  border-radius: 16px;
+  margin-top: 1rem;
+}
+
+.thank-title {
+  color: var(--White);
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.thank-txt {
+  text-align: center;
+  color: var(--Medium-Grey);
+  margin-top: 0.5rem;
+}
+
+/* Media queries */
+
+@media (min-width: 750px) {
+  .component {
+    background-color: var(--Dark-Blue);
+    max-width: 390px;
+    border-radius: 24px;
+  }
+  .rating {
+    padding: 2rem 2rem;
+  }
+
+  .rating-title {
+    font-size: 1.75rem;
+    margin-top: 1.2rem;
+  }
+
+  .rating-list li {
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+  }
+
+  .rating-btn {
+    margin-top: 2rem;
+  }
+
+  .thank {
+    padding: 2.2rem 1.5rem;
+  }
+
+  .thank-score {
+    margin-top: 1.5rem;
+  }
+
+  .thank-title {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Attribution Styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
